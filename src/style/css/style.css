@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+@layer base{
+    body{
+        @apply font-Inter
+    }
+    h1, h2, h3, h4, h5, h6, span{
+        @apply font-Mukta
+    }
+}
+
+
+@layer components{
+    .header_main_menu{
+        @apply
+        w-max shadow lg:shadow-none lg:flex text-primary lg:text-lightGray px-3 lg:px-0 lg:space-x-7 absolute lg:relative right-2 md:left-0 top-full lg:top-0 invisible lg:visible opacity-0 lg:opacity-100 group-hover:visible group-hover:opacity-100 group-hover:duration-300
+    }
+
+    .default_btn{
+        @apply
+        bg-secondary border border-secondary py-2 px-6 text-xs md:text-sm uppercase text-light font-medium rounded mt-5 inline-block hover:bg-opacity-0 hover:border-secondary hover:text-secondary duration-200
+    }
+    .add_to_cart_btn{
+        @apply
+        uppercase border bg-secondary p-2 rounded-b text-center text-light text-sm md:text-sm lg:text-lg hover:bg-light hover:border-secondary hover:text-secondary duration-200
+    }
+
+    .size_selector input:checked + label{
+        @apply bg-secondary2 text-light
+    }
+    .color_selector input:checked + label{
+        @apply border-2 border-secondary
+    }
+}

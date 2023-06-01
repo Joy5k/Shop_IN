@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>An Ecommerce Website Using Tailwindcss</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&family=Mukta:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <link rel="stylesheet" href="./css/tailwindcss.css">
+</head>
+<body>
+    
+
+    <header>
+        <div class="header_top py-2 px-1">
+
+        <div class="container lg:w-10/12 grid grid-cols-[50%_0%_50%] lg:grid-cols-[25%_50%_25%] items-center">
+                <!-- logo -->
+                <div class="header_logo font-bold text-2xl first-letter:text-4xl underline">
+                    <a href="index.html">Sho<span class="text-4xl">P</span> <span class="text-secondary text-4xl">BD</span></a>
+                </div>
+
+                <!-- search -->
+                <div class="header_search w-full flex invisible opacity-0 lg:visible lg:opacity-100">
+                    <input class="w-full h-10 py-2 px-4 border border-secondary border-r-0 rounded-md outline-none focus:border-secondary" type="search" name="" id="" placeholder="Search...">
+                    <button class="w-60 bg-secondary border border-secondary rounded-r-md text-light font-medium -ml-3">Search Now</button>
+
+                </div>
+
+
+                <!-- icon -->
+                <div class="header_icon flex justify-end space-x-4">
+
+                    <!-- User Wish List -->
+                    <a href="#" class="relative text-center">
+                        <div class="text-primary text-lg lg:text-2xl font-semibold">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="text-xs leading-3">Wish List</div>
+                        <div class="h-5 w-5 absolute right-0 -top-1 bg-secondary2 rounded-full text-light flex items-center justify-center p-2 text-xs font-medium">10</div>
+                    </a>
+           
+
+                    <!-- User Cart -->
+                    <div class="relative group">
+                        
+                        <a href="#" class="relative text-center">
+                            <div class="text-primary text-lg lg:text-2xl font-semibold">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </div>
+                            <div class="text-xs leading-3">Cart</div>
+                            <div class="h-5 w-5 absolute left-5 -top-1 bg-secondary2 rounded-full text-light flex items-center justify-center p-2 text-xs font-medium">05</div>
+    
+                        </a>
+                    <!-- User Cart Dropdown -->
+                            <div class="bg-light p-4 absolute top-full -right-12 sm:right-0 w-[300px] shadow border-b-4 border-secondary2 invisible opacity-0 group-hover:visible group-hover:opacity-100 duration-300 z-10">
+                                <h4 class="text-lg my-3 border-b border-[#ddd] pb-3">2 Items Added</h4>
+
+                                 <!-- Item One -->
+                                    <div class="flex space-x-3 pb-3 ">
+                                        <div class="w-20">
+                                            <img class="w-full" src="./images/products/product2.jpg" alt="mrahat">
+                                        </div>
+                                        <div class="w-40">
+                                            <h4>Men's Casual Shoes</h4>
+                                            <span>X1</span>
+                                            <span>$50</span>
+                                        </div>
+                                        <div>
+                                            <span><a href="#">X</a></span>
+                                        </div>
+                                    </div>
+                                 <!-- Item One -->
+                                    <div class="flex space-x-3 pb-3 ">
+                                        <div class="w-20">
+                                            <img class="w-full" src="./images/products/product3.jpg" alt="mrahat">
+                                        </div>
+                                        <div class="w-40">
+                                            <h4>Men's Casual Shoes</h4>
+                                            <span>X1</span>
+                                            <span>$50</span>
+                                        </div>
+                                        <div>
+                                            <span><a href="#">X</a></span>
+                                        </div>
+                                    </div>
+                      
+                                  <div class="flex justify-between">
+                                      <a href="#" class="bg-secondary py-2 px-6 text-light font-medium rounded uppercase text-sm">View Cart</a>
+                                      <a href="#" class="bg-secondary py-2 px-6 text-light font-medium rounded uppercase text-sm">Checkout</a>
+                                                   
+                                </div>
+                            </div>
+                    <!-- User Cart Dropdown -->
+                    </div>
+
+           
+                    <!--User Account  -->
+                    <div class="relative group">
+
+                        <a href="#" class="text-center">
+                            <div class="text-primary text-lg lg:text-2xl font-semibold">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <div class="text-xs leading-3">Account</div>
+    
+                        </a>
+                            <!-- Account Dropdown -->
+                            <div class="bg-light p-4 absolute top-full right-0 w-[230px] shadow border-b-4 border-secondary2 invisible opacity-0 group-hover:visible group-hover:opacity-100 duration-300 z-10">
+                              <h4 class="text-sm my-3 text-center">Welcome to ShopNowBD</h4>
+                                <div class="flex justify-between">
+                                    <a href="register.html" class="bg-secondary py-2 px-6 text-light font-medium rounded uppercase text-sm">Join</a>
+                                    <a href="login.html" class="bg-secondary py-2 px-6 text-light font-medium rounded uppercase text-sm">Sign In</a>
+                                                 
+                                 </div>
+                                 <ul class="space-y-2 pt-4">
+                                    <li><a class="hover:text-secondary duration-200" href="#">My Account</a></li>
+                                    <li><a class="hover:text-secondary duration-200" href="#">My Order</a></li>
+                                    <li><a class="hover:text-secondary duration-200" href="#">My Wish List</a></li>
+                                    <li><a class="hover:text-secondary duration-200" href="#">My Cart</a></li>
+                                    <li><a class="hover:text-secondary duration-200" href="login.html">Logout</a></li>
+                                 </ul>
+                                </div>
+                            <!-- Account Dropdown -->
+
+
+                    </div>
+
+                </div>
+
+            </div>
+         </div>
+
+
+
+         <!------------ Main  Header ---------->
+        <nav class="bg-primary">
+
+            <div class="container lg:w-10/12 grid grid-cols-2 md:grid-cols-[25%_50%_25%] items-center">
+
+                <!-- Categorys -->
+                    <div class="all_categories bg-secondary inline-block w-max py-3 px-5 text-light font-medium tracking-wide cursor-pointer relative group">
+                        <span><i class="fa-solid fa-bars text-xl"></i><a class="ml-3" href="#"></a>All Categories</span>   
+                        
+                        <ul class="absolute left-0 top-full bg-light w-max shadow text-primary divide-y divide-[#ddd] px-4 invisible opacity-0 group-hover:opacity-100 group-hover:visible  duration-300 transition">
+                            <li class="py-2"><a class="hover:text-secondary duration-200" href="#">Men's Shart</a></li>
+                            <li class="py-2"><a class="hover:text-secondary duration-200" href="#">Men's Chlothing</a></li>
+                            <li class="py-2"><a class="hover:text-secondary duration-200" href="#">Men's Shoes</a></li>
+                            <li class="py-2"><a class="hover:text-secondary duration-200" href="#">Women's Clothing</a></li>
+                            <li class="py-2"><a class="hover:text-secondary duration-200" href="#">Women's Shoes</a></li>
+                            <li class="py-2"><a class="hover:text-secondary duration-200" href="#">Sharee</a></li>
+                        </ul>
+                                                
+                
+                    </div>
+
+                    <!-- Header Menu -->
+                    <div class=" flex justify-end md:flex-none md:justify-start">
+
+                        <div class="toggle_bar pr-4 md:pr-0 md:pl-10 lg:pl-0 text-light text-lg relative group cursor-pointer"><i class="fa-solid fa-bars lg:hidden"></i>
+
+                            <ul class="header_main_menu bg-light lg:bg-primary w-[180px] lg:w-full">  
+
+                                <li class="py-2"><a class="hover:text-secondary duration-200" href="#">Home</a></li>
+                                <li class="py-2"><a class="hover:text-secondary duration-200" href="#">About Us</a></li>
+                                <li class="py-2"><a class="hover:text-secondary duration-200" href="#">Services</a></li>
+                                <li class="py-2"><a class="hover:text-secondary duration-200" href="#">Shop</a></li>
+                                <li class="py-2"><a class="hover:text-secondary duration-200" href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+
+                    <!-- Header Phone -->
+                <div class="hidden md:block">
+                    <div class="flex justify-end text-light items-center">
+                        <ul class="flex space-x-2">
+                            <li><a class="h-8 w-8 leading-8 bg-primary text-light inline-block text-center rounded-full hover:bg-secondary2 duration-200" href="https://www.facebook.com/shahnurmrahat" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+                            <li><a class="h-8 w-8 leading-8 bg-primary text-light inline-block text-center rounded-full hover:bg-secondary2 duration-200" href="https://www.linkedin.com/in/mohammadrahat/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                            <li><a class="h-8 w-8 leading-8 bg-primary text-light inline-block text-center rounded-full hover:bg-secondary2 duration-200" href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+                </div>
+            </nav>
+
+
+
+    </header>
+    <!-- BreadCum Start -->
+    <section class="py-4">
+        <div class="container w-11/12 lg:w-10/12 flex gap-2 text-sm">
+            <a class="text-secondary2 text-sm" href="index.html">
+                <i class="fa-solid fa-house"></i>
+            </a>
+
+            <a href="index.html">
+                <i class="fa-solid fa-chevron-right"></i>
+            </a>
+
+           <span class="text-secondary2">
+            <a href="#">Shop</a>
+           </span>
+
+            <span>
+                <i class="fa-solid fa-chevron-right"></i>
+            </span>
+
+            <p>Men's Adidas Courtsmash</p>
+
+        </div>
+    </section>
+
+    <!-- BreadCum End -->
+
+    <!--  Product View Start -->
+
+    <section class="pb-10">
+        <div class="container w-11/12 lg:w-10/12 grid md:grid-cols-[50%_50%] gap-5">
+            <!-- Product Image -->
+            <div>
+                <img src="./images/products/product9.jpg" alt="mrahat">
+
+                <div class="grid grid-cols-5 gap-2 mt-4">
+                    <img class="border border-secondary2" src="./images/products/product9.jpg" alt="mrahat">
+                    <img class="border border-[#ddd] " src="./images/products/product9.jpg" alt="mrahat">
+                    <img class="border border-[#ddd] " src="./images/products/product9.jpg" alt="mrahat">
+                    <img class="border border-[#ddd] " src="./images/products/product9.jpg" alt="mrahat">
+                    <img class="border border-[#ddd] " src="./images/products/product9.jpg" alt="mrahat">
+                </div>
+            </div>
+             <!-- Product Image -->
+              <!-- Product Content -->
+            <div>
+                <h1 class="text-2xl md:text-3xl">MEN'S ADIDAS COURTSMASH</h1>
+                <div class="flex space-x-3 my-5">
+                    <ul class="flex space-x-2">
+                        <li><a class="text-secondary2 text-sm" href="#"><i class="fa-solid fa-star"></i></a></li>
+                        <li><a class="text-secondary2 text-sm" href="#"><i class="fa-solid fa-star"></i></a></li>
+                        <li><a class="text-secondary2 text-sm" href="#"><i class="fa-solid fa-star"></i></a></li>
+                        <li><a class="text-secondary2 text-sm" href="#"><i class="fa-solid fa-star"></i></a></li>
+                        <li><a class="text-secondary2 text-sm" href="#"><i class="fa-solid fa-star"></i></a></li>
+                    </ul>
+                    <span>50 Reviews</span>
+                </div>
+
+                <div>
+                    <ul class="space-y-3">
+                        <li class="font-semibold">Availability: <span class="text-secondary">In Stock</span></li>
+                        <li class="font-semibold">Brands: <span class="font-medium">IBeta</span></li>
+                        <li class="font-semibold">Category: <span class="font-medium">Clothing</span></li>
+                        <li class="font-semibold">SKU: <span class="font-medium">IBE45VGRT</span></li>
+                    </ul>
+                    <ul class="flex space-x-4 font-bold text-xl my-3">
+                        <li class="line-through">15000TK</li>
+                        <li><a class="text-secondary2" href="#">13000TK</a></li>
+                    </ul>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis</p>
+                </div>
+
+
+                <!-- PRODUCT SIZE -->
+                <div class="mt-4">
+                    <h3>SIZE:</h3>
+                    <div class="size_selector me-2 flex mt-2">
+                        <input type="radio" name="color-red" id="XS" class="hidden">
+                        <label for="XS" class="h-6 w-6 border border-[#ddd] shadow rounded cursor-pointer p-2 text-xs flex justify-center items-center me-2">XS</label>
+                       
+                        <input type="radio" name="color-red" id="S" class="hidden">
+                        <label for="S" class="h-6 w-6 border border-[#ddd] shadow rounded cursor-pointer p-2 text-xs flex justify-center items-center me-2">S</label>
+
+                        <input type="radio" name="color-red" id="M" class="hidden">
+                        <label for="M" class="h-6 w-6 border border-[#ddd] shadow rounded cursor-pointer p-2 text-xs flex justify-center items-center me-2">M</label>
+
+                        <input type="radio" name="color-red" id="L" class="hidden">
+                        <label for="L" class="h-6 w-6 border border-[#ddd] shadow rounded cursor-pointer p-2 text-xs flex justify-center items-center me-2">L</label>
+
+                        <input type="radio" name="color-red" id="XL" class="hidden">
+                        <label for="XL" class="h-6 w-6 border border-[#ddd] shadow rounded cursor-pointer p-2 text-xs flex justify-center items-center me-2">XL</label>
+                       
+                    </div>
+                </div>
+                <!-- PRODUCT SIZE -->
+                <!-- PRODUCT COLOR -->
+                <div class="mt-4">
+                    <h3>COLOR:</h3>
+                    <div class="color_selector me-2 flex mt-2">
+                        <input type="radio" name="color-red" id="c_red" class="hidden">
+                        <label for="c_red" class="h-6 w-6 border border-[#ddd] shadow rounded cursor-pointer p-2 text-xs flex justify-center items-center me-2" style="background: red;"></label>
+                       
+                        <input type="radio" name="color-red" id="c_white" class="hidden">
+                        <label for="c_white" class="h-6 w-6 border border-[#ddd] shadow rounded cursor-pointer p-2 text-xs flex justify-center items-center me-2" style="background: white;"></label>
+
+                        <input type="radio" name="color-red" id="c_black" class="hidden">
+                        <label for="c_black" class="h-6 w-6 border border-[#ddd] shadow rounded cursor-pointer p-2 text-xs flex justify-center items-center me-2" style="background: black;"></label>
+
+                       
+                    </div>
+                </div>
+                <!-- PRODUCT COLOR -->
+                <!-- P Quantity -->
+                <div class="mt-4"> 
+                    <h3>QUANTITY:</h3>
+                    <ul class="flex mt-3">
+                        <li class="w-6 h-6 leading-5 border border-[#ddd] text-center cursor-pointer rounded ">-</li>
+                        <li class="w-8 h-6 leading-5 border border-[#ddd] text-center cursor-pointer rounded ">5</li>
+                        <li class="w-6 h-6 leading-5 border border-[#ddd] text-center cursor-pointer rounded ">+</li>
+                 
+                    </ul>
+                </div>
+                <!-- P Quantity -->
+             <!-- Button -->
+              <div class="mt-5">
+                <a href="#" class="default_btn mr-0 md:mr-3 uppercase"><span><i class="fa-solid fa-cart-shopping"></i></span> Add To Cart</a>
+                <a href="#" class="default_btn bg-light text-primary hover:bg-secondary hover:text-light uppercase ml-0 md:ml-3"><span><i class="fa-regular fa-heart"></i></span> Wish List</a>
+              </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!--  Product View End -->
+
+    <!--  Product Info -->
+    <section class="py-[50px] md:py-[80px]">
+        <div class="container w-11/12 lg:w-10/12">
+            <div>
+                <h2 class="text-xl font-semibold">Product Information</h2>
+                <p class="my-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est nec condimentum lorem lacus. Lectus libero in vulputate quis massa nisl risus, libero ut. Morbi praesent ipsum sed morbi turpis sed. Amet sed fames fermentum, augue dignissim. Montes, velit velit eu gravida nibh in feugiat.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est nec condimentum lorem lacus. Lectus libero in vulputate quis massa nisl risus, libero ut. Morbi praesent ipsum sed morbi turpis sed. Amet sed fames fermentum, augue dignissim. Montes, velit velit eu gravida nibh in feugiat.</p>
+
+                <div class="mt-6">
+                    <table class="border-collapse w-full h-10">
+                        <tbody>
+                          <tr>
+                            <td class="border border-[#ddd] p-2">Color</td>
+                            <td class="border border-[#ddd] p-2">Black, Brown, Red</td>
+                          </tr>
+                          <tr>
+                            <td class="border border-[#ddd] p-2">Color</td>
+                            <td class="border border-[#ddd] p-2">Black, Brown, Red</td>
+                          </tr>
+                          <tr>
+                            <td class="border border-[#ddd] p-2">Color</td>
+                            <td class="border border-[#ddd] p-2">Black, Brown, Red</td>
+                          </tr>
+                     
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <!--  Product Info -->
+
+
+
+    <!-- Related Products -->
+    <section class="pb-[80px]">
+        <div class="container w-11/12 lg:w-10/12 mb-6">
+            <h1 class="text-2xl md:text-4xl font-semibold">RELATED PRODUCTS</h1>
+        </div>
+
+        <div class="container w-11/12 lg:w-10/12 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-4">
+
+            <!-- Products Item -->
+            <div class="p_main_items rounded group shadow">
+            <!-- P Top  -->
+            <a href="#">
+                <div class="relative">
+                  <img src="./images/products/product2.jpg" alt="mrahat">
+
+                    <div class="absolute right-3 top-3 h-8 w-8 bg-light rounded-full flex items-center justify-center">
+                        <a href="#">
+                            <span><i class="fa-regular fa-heart"></i></span>
+                        </a>
+                    </div>
+
+                    <div class="absolute left-0 bottom-0 w-full bg-primary rounded-b text-light text-lg text-center p-2 invisible opacity-0 group-hover:visible group-hover:opacity-100 duration-200">
+                        <a href="#">
+                            <span class="text-sm md:text-lg"><i class="fa-solid fa-eye"></i> Quick View</span>
+                        </a>
+                    </div>
+                </div>
+            </a>
+            <!-- P Bottom Content -->
+                <div class="p_contents p-3">
+                    <h2 class="text-lg text-primary font-medium">PELAGIA LOUNGE</h2>
+                    <p class="text-[15px] my-2">Outdoor Modular Lounge</p>
+                    <h3 class="text-xl text-secondary2 font-semibold">$449.00</h3>
+                   <div class="flex my-2">
+                        <ul class="mr-2 flex space-x-2">
+                            <li class="text-secondary2"><i class="fa-solid fa-star"></i></li>
+                            <li class="text-secondary2"><i class="fa-solid fa-star"></i></li>
+                            <li class="text-secondary2"><i class="fa-solid fa-star"></i></li>
+                            <li class="text-secondary2"><i class="fa-solid fa-star"></i></li>
+                            <li class="text-secondary2"><i class="fa-solid fa-star"></i></li>
+                        </ul>
+                        <div>
+                            ( 50 ) 
+                        </div>
+                   </div>
+                </div>
+
+                <!-- Add To Cart Btn -->
+                <div class="add_to_cart_btn">
+                    <a href="#">
+                        <h2><span class="mr-3"><i class="fa-solid fa-cart-shopping"></i></span>Add to Cart</h2>
+                    </a>   
+                </div>
+
+            </div>
+
+            <!-- Products Item -->
+            <div class="p_main_items rounded group shadow">
+            <!-- P Top  -->
+            <a href="#">
+                <div class="relative">
+                  <img src="./images/products/product3.jpg" alt="mrahat">
+                    <div class="w-12 h-8 bg-secondary2 text-light font-medium rounded absolute top-3 left-3 flex items-center justify-center ">
+                        <span>HOT</span>
+                    </div>
+                    <div class="absolute right-3 top-3 h-8 w-8 bg-light rounded-full flex items-center justify-center">
+                        <a href="#">
+                            <span><i class="fa-regular fa-heart"></i></span>
+                        </a>
+                    </div>
+
+                    <div class="absolute left-0 bottom-0 w-full bg-primary rounded-b text-light text-lg text-center p-2 invisible opacity-0 group-hover:visible group-hover:opacity-100 duration-200">
+                        <a href="#">
+                            <span class="text-sm md:text-lg"><i class="fa-solid fa-eye"></i> Quick View</span>
+                        </a>
+                    </div>
+                </div>
+            </a>
+            <!-- P Bottom Content -->
+                <div class="p_contents p-3">
+                    <h2 class="text-lg text-primary font-medium">PELAGIA LOUNGE</h2>
+                    <p class="text-[15px] my-2">Outdoor Modular Lounge</p>
+                    <h3 class="text-xl text-secondary2 font-semibold">$449.00</h3>
+                   <div class="flex my-2">
+                        <ul class="mr-2 flex space-x-2">
+                            <li class="text-secondary2"><i class="fa-solid fa-star"></i></li>
+                            <li class="text-secondary2"><i class="fa-solid fa-star"></i></li>
+                            <li class="text-secondary2"><i class="fa-solid fa-star"></i></li>
+                            <li class="text-secondary2"><i class="fa-solid fa-star"></i></li>
+                            <li class="text-secondary2"><i class="fa-solid fa-star"></i></li>
+                        </ul>
+                        <div>
+                            ( 50 ) 
+                        </div>
+                   </div>
+                </div>
+
+                <!-- Add To Cart Btn -->
+                <div class="add_to_cart_btn">
+                    <a href="#">
+                        <h2><span class="mr-3"><i class="fa-solid fa-cart-shopping"></i></span>Add to Cart</h2>
+                    </a>   
+                </div>
+
+            </div>
+
+            <!-- Products Item -->
+            <div class="p_main_items rounded group shadow">
+            <!-- P Top  -->
+            <a href="#">
+                <div class="relative">
+                  <img src="./images/products/product4.jpg" alt="mrahat">
+
+                    <div class="absolute right-3 top-3 h-8 w-8 bg-light rounded-full flex items-center justify-center">
+                        <a href="#">
+                            <span><i class="fa-regular fa-heart"></i></span>
+                        </a>
+                    </div>
+
+                    <div class="absolute left-0 bottom-0 w-full bg-primary rounded-b text-light text-lg text-center p-2 invisible opacity-0 group-hover:visible group-hover:opacity-100 duration-200">
+                        <a href="#">
+                            <span class="text-sm md:text-lg"><i class="fa-solid fa-eye"></i> Quick View</span>
+                        </a>
+                    </div>
+                </div>
+            </a>
+            <!-- P Bottom Content -->
+                <div class="p_contents p-3">
+                    <h2 class="text-lg text-primary font-medium">PELAGIA LOUNGE</h2>
+                    <p class="text-[15px] my-2">Outdoor Modular Lounge</p>
+                    <h3 class="text-xl text-secondary2 font-semibold">$449.00</h3>
+                   <div class="flex my-2">
+                        <ul class="mr-2 flex space-x-2">
+                            <li class="text-secondary2"><i class="fa-solid fa-star"></i></li>
+                            <li class="text-secondary2"><i class="fa-solid fa-star"></i></li>
+                            <li class="text-secondary2"><i class="fa-solid fa-star"></i></li>
+                            <li class="text-secondary2"><i class="fa-solid fa-star"></i></li>
+                            <li class="text-secondary2"><i class="fa-solid fa-star"></i></li>
+                        </ul>
+                        <div>
+                            ( 50 ) 
+                        </div>
+                   </div>
+                </div>
+
+                <!-- Add To Cart Btn -->
+                <div class="add_to_cart_btn">
+                    <a href="#">
+                        <h2><span class="mr-3"><i class="fa-solid fa-cart-shopping"></i></span>Add to Cart</h2>
+                    </a>   
+                </div>
+
+            </div>
+
+            <!-- Products Item -->
+            <div class="p_main_items rounded group shadow">
+            <!-- P Top  -->
+            <a href="#">
+                <div class="relative">
+                  <img src="./images/products/product3.jpg" alt="mrahat">
+                    <div class="w-12 h-8 bg-secondary text-light font-medium rounded absolute top-3 left-3 flex items-center justify-center ">
+                        <span>25%</span>
+                    </div>
+                    <div class="absolute right-3 top-3 h-8 w-8 bg-light rounded-full flex items-center justify-center">
+                        <a href="#">
+                            <span><i class="fa-regular fa-heart"></i></span>
+                        </a>
+                    </div>
+
+                    <div class="absolute left-0 bottom-0 w-full bg-primary rounded-b text-light text-lg text-center p-2 invisible opacity-0 group-hover:visible group-hover:opacity-100 duration-200">
+                        <a href="#">
+                            <span class="text-sm md:text-lg"><i class="fa-solid fa-eye"></i> Quick View</span>
+                        </a>
+                    </div>
+                </div>
+            </a>
+            <!-- P Bottom Content -->
+                <div class="p_contents p-3">
+                    <h2 class="text-lg text-primary font-medium">PELAGIA LOUNGE</h2>
+                    <p class="text-[15px] my-2">Outdoor Modular Lounge</p>
+                    <h3 class="text-xl text-secondary2 font-semibold">$449.00</h3>
+                   <div class="flex my-2">
+                        <ul class="mr-2 flex space-x-2">
+                            <li class="text-secondary2"><i class="fa-solid fa-star"></i></li>
+                            <li class="text-secondary2"><i class="fa-solid fa-star"></i></li>
+                            <li class="text-secondary2"><i class="fa-solid fa-star"></i></li>
+                            <li class="text-secondary2"><i class="fa-solid fa-star"></i></li>
+                            <li class="text-secondary2"><i class="fa-solid fa-star"></i></li>
+                        </ul>
+                        <div>
+                            ( 50 ) 
+                        </div>
+                   </div>
+                </div>
+
+                <!-- Add To Cart Btn -->
+                <div class="add_to_cart_btn">
+                    <a href="#">
+                        <h2><span class="mr-3"><i class="fa-solid fa-cart-shopping"></i></span>Add to Cart</h2>
+                    </a>   
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+    </section>
+
+
+    <!-- Footer Area -->
+    <footer class="border-t border-secondary">
+        <div class="footer_top py-10 bg-lightGray">
+            <div class="container w-11/12 lg:w-10/12 grid md:grid-cols-[30%_20%_20%_30%] gap-10 overflow-hidden">
+                <div>
+                    <div class="header_logo font-bold text-2xl first-letter:text-4xl underline">
+                        <a href="index.html">Sho<span class="text-4xl">P</span> <span class="text-secondary text-4xl">BD</span></a>
+                    </div>
+                    <p>Lorem ipsum, or lipsum as it is sometimes kno wn, is dummy text used in laying out print, gra phic or web designs.</p>
+                    <div class="mt-7 flex">
+                        <input class="w-full h-10 py-2 px-4 border border-secondary rounded-md outline-none focus:border-secondary" type="email" placeholder="Your Email Address">
+                        <button class="default_btn mt-0 -m-2 h-10" type="submit">Subscribe</button>
+                    </div>
+                </div>
+
+
+                <div>
+                    <h2 class="text-lg font-medium text-primary mb-5">MY ACCOUNT</h2>
+                    <ul class="space-y-2">
+                        <li><a class="hover:text-secondary duration-200" href="#">Order</a></li>
+                        <li><a class="hover:text-secondary duration-200" href="#">Wish List</a></li>
+                        <li><a class="hover:text-secondary duration-200" href="#">Track Order</a></li>
+                        <li><a class="hover:text-secondary duration-200" href="#">Manage Account</a></li>
+                        <li><a class="hover:text-secondary duration-200" href="#">Return Order</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="text-lg font-medium text-primary mb-5">INFORMATION</h2>
+                    <ul class="space-y-2">
+                        <li><a class="hover:text-secondary duration-200" href="#">About us</a></li>
+                        <li><a class="hover:text-secondary duration-200" href="#">Privacy Policy</a></li>
+                        <li><a class="hover:text-secondary duration-200" href="#">Terms & Conditions</a></li>
+                        <li><a class="hover:text-secondary duration-200" href="#">Contact Us</a></li>
+                        <li><a class="hover:text-secondary duration-200" href="#">Return Order</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="text-lg font-medium text-primary mb-5">CONTACT</h2>
+                    <ul class="space-y-2">
+                        <li><span class="font-medium">Location:</span> Barishal, Patuakhali 8600</li>
+                        <li><span class="font-medium">Mobile:</span> +8801715-867227 </li>
+                        <li><span class="font-medium">Email:</span> officialmrahat@gmail.com </li>
+                    </ul>
+                    <ul class="mt-5 flex space-x-2">
+                        <li><a class="h-8 w-8 leading-8 bg-primary text-light inline-block text-center rounded-full hover:bg-secondary2 duration-200" href="https://www.facebook.com/shahnurmrahat" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a class="h-8 w-8 leading-8 bg-primary text-light inline-block text-center rounded-full hover:bg-secondary2 duration-200" href="https://www.linkedin.com/in/mohammadrahat/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                        <li><a class="h-8 w-8 leading-8 bg-primary text-light inline-block text-center rounded-full hover:bg-secondary2 duration-200" href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer_bottom bg-primary py-3">
+            <div class="container w-11/12 lg:w-10/12 grid md:grid-cols-2 items-center">
+                <div class="text-light text-sm md:text-sm text-center md:text-start mb-3 md:mb-0">
+                    <p>©2023 - Develop & Design - Mohammad Rahat</p>
+                </div>
+                <div class="md:ml-auto">
+                    <img class="w-72" src="./images/payment-method.png" alt="">
+                </div>
+            </div>
+        </div>
+
+
+
+    </footer>
+    <!-- Footer Area -->
+
+
+    <script src="./js/main.js" type="module"></script>
+</body>
+</html>
